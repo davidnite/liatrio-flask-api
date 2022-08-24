@@ -11,6 +11,7 @@ COPY Pipfile Pipfile.lock bootstrap.sh ./
 COPY flaskApi ./flaskApi
 
 # Install API dependencies
+RUN ["chmod", "+x", "/usr/src/app/bootstrap.sh"]
 RUN pipenv install
 
 # Start app
